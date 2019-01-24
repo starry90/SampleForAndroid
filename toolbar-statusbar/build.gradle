@@ -1,0 +1,16 @@
+apply plugin: 'com.android.application'
+apply from: rootProject.file('gradle/base.gradle')
+
+android {
+    defaultConfig {
+        testInstrumentationRunner deps.androidRunner
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.appcompat
+    testImplementation deps.junit
+    androidTestImplementation deps.runner
+    androidTestImplementation deps.espresso
+}

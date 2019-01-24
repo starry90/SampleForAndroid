@@ -1,1 +1,2 @@
 include ':fore-back-status'
+include ':toolbar-statusbar'
